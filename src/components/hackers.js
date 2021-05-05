@@ -11,7 +11,7 @@ const Hackers = ({ handleChange, appObj, decrementStep }) => {
         </label>
         <p>UCSC student?</p>
         <label htmlFor="school">Yes </label>
-        <input type="radio" id="school" name="univeristy" value="University of California, Santa Cruz" onChange={handleChange}/>
+        <input type="radio" id="school" name="university" value="University of California, Santa Cruz" onChange={handleChange}/>
         <label htmlFor="school2">No </label>
         <input type="radio" id="school2" name="university" value="" onChange={handleChange}/>
         <input name="university" onChange={handleChange} value={appObj.university} maxLength="50"/>

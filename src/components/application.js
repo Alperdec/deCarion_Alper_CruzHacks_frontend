@@ -4,6 +4,7 @@ import General from './general'
 import Volunteers from './volunteers'
 import Hackers from './hackers'
 import validator from 'validator'
+
 const Application = () => {
   // general info --init
   const init = {
@@ -67,7 +68,7 @@ const Application = () => {
       if (appObj.applicationType === 'Hacker') {
         if (parseInt(hackerObj.gradyear, 10) < 2100 && parseInt(hackerObj.gradyear, 10) > 1900) {
           axios
-            .post('http://localhost:3001/applicants', { ...appObj, ...hackerObj })
+            .post('https://us-central1-alperdec-backend.cloudfunctions.net/applicant', { ...appObj, ...hackerObj })
             .then(response => {
               console.log(response)
               setApp(init)
@@ -78,7 +79,7 @@ const Application = () => {
         }
       } else {
         axios
-          .post('http://localhost:3001/applicants', { ...appObj, ...volunteerObj })
+          .post('https://us-central1-alperdec-backend.cloudfunctions.net/applicant', { ...appObj, ...volunteerObj })
           .then(response => {
             console.log(response)
             setApp(init)
