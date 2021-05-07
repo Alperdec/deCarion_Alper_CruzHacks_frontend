@@ -6,7 +6,6 @@ Date: 05/07/2021
 This project is an application portal for CruzHacks built using React.js
 and is implemented as a SPA(single-page-application) with conditional rendering.
 
-Included in this main directory is a directory titled "frontend" which contains the entire application
 
 To reach the source code please navigate to the directory titled "src" within the frontend directory.
 There you can find "INDEX.JS/CSS, APP.JS/CSS and "components".
