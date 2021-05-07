@@ -85,20 +85,24 @@ input{
   grid-template-rows: .25fr .25fr .25fr .25fr .25fr;
 }
 .firstname {
-  grid-row: 1;
-  grid-column: 2;
-
+  grid-area: 1/2/1/3;
+  margin: 0em 1em 0em 1em;
 }
 .lastname {
-  grid-row: 1;
-  grid-column: 4;
-
+  grid-area: 1/4/1/5;
+  margin: 0em 1em 0em 1em;
 }
 .gender {
   grid-row:2;
   grid-column-start:2;
   grid-column-end:6;
   align-self: center;
+}
+.gender input {
+  margin: 0em 1em 0em 1em;
+}
+.apptype input{
+  margin: 0em 1em 0em 1em;
 }
 .email {
   grid-row: 3;
@@ -241,7 +245,6 @@ input{
     padding: 1em;
     border-radius: 2%;
   }
-
   .general-container {
     display: flex;
     flex-flow: column wrap;

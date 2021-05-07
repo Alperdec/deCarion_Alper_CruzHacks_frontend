@@ -68,7 +68,7 @@ const Application = () => {
       if (appObj.applicationType === 'Hacker') {
         if (parseInt(hackerObj.gradyear, 10) < 2100 && parseInt(hackerObj.gradyear, 10) > 1900) {
           axios
-            .post('https://us-central1-alperdec-backend.cloudfunctions.net/applicant', { ...appObj, ...hackerObj })
+            .post('https://us-central1-alperdec-backend.cloudfunctions.net/api', { ...appObj, ...hackerObj })
             .then(response => {
               console.log(response)
               setApp(init)
@@ -79,7 +79,7 @@ const Application = () => {
         }
       } else {
         axios
-          .post('https://us-central1-alperdec-backend.cloudfunctions.net/applicant', { ...appObj, ...volunteerObj })
+          .post('https://us-central1-alperdec-backend.cloudfunctions.net/api', { ...appObj, ...volunteerObj })
           .then(response => {
             console.log(response)
             setApp(init)
